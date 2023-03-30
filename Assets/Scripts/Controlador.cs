@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovimientoJoystick : MonoBehaviour
+public class Controlador : MonoBehaviour
 {
     public Joystick miJoystick;
     public int velocidad;
@@ -21,5 +21,15 @@ public class MovimientoJoystick : MonoBehaviour
         {
             gameObject.transform.Translate(direccion * velocidad * Time.deltaTime);
         }
+    }
+
+    public void Atacar()
+    {
+        Debug.Log("Estoy atacando");
+    }
+
+    public void Dash()
+    {
+        Debug.Log("Estoy corriendo");
     }
 }
