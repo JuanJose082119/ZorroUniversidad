@@ -20,6 +20,13 @@ public class Controlador : MonoBehaviour
                 atacar = false;
             }
         }
+
+        movimiento.x = miJoystick.Horizontal;
+        movimiento.z = miJoystick.Vertical;
+        if(Input.GetButtonDown("Fire2"))
+        {
+            Dash();
+        }
     }
 
     public float dashVelocidad;
@@ -38,16 +45,6 @@ public class Controlador : MonoBehaviour
     private void FixedUpdate()
     {
         LoopDash();
-    }
-
-    private void Update()
-    {
-        movimiento.x = miJoystick.Horizontal;
-        movimiento.z = miJoystick.Vertical;
-        if(Input.GetButtonDown("Fire2"))
-        {
-            Dash();
-        }
     }
 
     public void Dash()
@@ -87,4 +84,5 @@ public class Controlador : MonoBehaviour
             miRigidbody.velocity = (velocidad + dashing) * movimiento;
             //gameObject.transform.Translate(direccion * velocidad * Time.deltaTime);
         }
+    }
 }
