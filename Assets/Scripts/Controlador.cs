@@ -21,12 +21,7 @@ public class Controlador : MonoBehaviour
         {
             gameObject.transform.Translate(direccion * velocidad * Time.deltaTime);
         }
-    }
-
-    public void Atacar()
-    {
-        Debug.Log("Estoy atacando");
-    }
+    }    
 
     public void Dash()
     {
