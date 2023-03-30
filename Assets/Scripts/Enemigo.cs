@@ -60,5 +60,6 @@ public class Enemigo : MonoBehaviour
             _isAgro = false;
 
         }
+
     }
 }
