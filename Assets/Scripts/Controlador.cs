@@ -9,22 +9,70 @@ public class Controlador : MonoBehaviour
     public Rigidbody miRigidbody;
     public bool conFisicas;
 
+    public float dashVelocidad;
+    public float dashDuracion;
+    public float dashContador;
+    private Transform transformJugador;
+
+    Vector3 movimiento = new Vector3();
+    public float dashing;
+
+    private void Awake()
+    {
+        transformJugador= GetComponent<Transform>();
+    }
+
     private void FixedUpdate()
+    {
+        LoopDash();
+    }
+
+    private void Update()
+    {
+        movimiento.x = miJoystick.Horizontal;
+        movimiento.z = miJoystick.Vertical;
+        if(Input.GetButtonDown("Fire2"))
+        {
+            Dash();
+        }
+    }
+
+    public void Dash()
+    {
+        dashContador = dashDuracion;
+        dashing = 8;
+        Invoke("ResetearDash", 0.3f);
+    }
+
+    public void ResetearDash()
+    {
+        dashing = 0;
+    }
+
+    public void LoopDash()
+    {
+
+        if (dashContador > 0)
+        {
+            dashContador = dashContador - Time.fixedDeltaTime;
+            //miRigidbody.velocity = new Vector3(miRigidbody.velocity.x, miRigidbody.velocity.y, dashVelocidad * transformJugador.localScale.z);
+                //new Vector3(dashVelocidad * transformJugador.localScale.x, miRigidbody.velocity.y, dashVelocidad * transformJugador.localScale.z);
+        }
+        Mover();
+    }
+
+    public void Mover()
     {
         Vector3 direccion = Vector3.forward * miJoystick.Vertical + Vector3.right * miJoystick.Horizontal;
 
-        if(conFisicas)
+        if (conFisicas)
         {
             miRigidbody.AddForce(direccion * velocidad * Time.fixedDeltaTime, ForceMode.Impulse);
         }
         else
         {
-            gameObject.transform.Translate(direccion * velocidad * Time.deltaTime);
+            miRigidbody.velocity = (velocidad + dashing) * movimiento;
+            //gameObject.transform.Translate(direccion * velocidad * Time.deltaTime);
         }
-    }    
-
-    public void Dash()
-    {
-        Debug.Log("Estoy corriendo");
     }
 }

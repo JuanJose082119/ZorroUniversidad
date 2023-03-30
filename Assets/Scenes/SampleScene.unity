@@ -755,9 +755,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miJoystick: {fileID: 1539825262}
-  velocidad: 7
+  velocidad: 5
   miRigidbody: {fileID: 375772613}
   conFisicas: 0
+  dashVelocidad: 10
+  dashDuracion: 18
+  dashContador: 0.3
+  dashing: 0
 --- !u!114 &375772619
 MonoBehaviour:
   m_ObjectHideFlags: 0
