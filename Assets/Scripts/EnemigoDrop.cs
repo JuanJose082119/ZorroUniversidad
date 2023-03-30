@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemigo : MonoBehaviour
+public class EnemigoDrop : MonoBehaviour
 {
     public GameObject drop;
     private void OnTriggerEnter(Collider other)
