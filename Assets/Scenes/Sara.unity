@@ -889,7 +889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b79bfa33ed0ecd40a00585511ede95f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemigoPrefab: {fileID: 884123952791451987, guid: 69ab0c770bafab44e8d8c43fb82fe296, type: 3}
+  enemigoPrefab: {fileID: 1960545789581357716, guid: 21c2f4696ef4b014f9ed179ee0047b83, type: 3}
   enemigoIntervalo: 2
 --- !u!4 &693491596
 Transform:
