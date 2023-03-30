@@ -8,6 +8,14 @@ public class EnemigoObjetos : MonoBehaviour
     public float puntos;
     public float vida;
 
+    void Start(){
+        vida = 30;
+    }
+
+    void Update(){
+        
+    }
+
     private void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.tag == "Player"){
@@ -17,10 +25,5 @@ public class EnemigoObjetos : MonoBehaviour
             }
         }
         
-    }
-
-    public void Atacar()
-    {
-        vida -= 10f;
     }
 }
