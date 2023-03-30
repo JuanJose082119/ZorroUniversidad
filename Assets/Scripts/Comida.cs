@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class Comida : MonoBehaviour
 {
     public float hambre = 100f;
-    public Image barra;
+    public Image barra;    
+    public EnemigoObjetos enem;
 
     void Start()
     {
@@ -25,5 +26,17 @@ public class Comida : MonoBehaviour
         }
 
         barra.fillAmount = hambre / 100f;
+    }
+
+    private void OnCollisionEnter(Collision col){
+        if(col.gameObject.tag == "Drop"){
+            Destroy(col.gameObject);
+            Puntos();
+        }
+    }
+
+    
+    public void Puntos(){
+        hambre += enem.puntos;
     }
 }
