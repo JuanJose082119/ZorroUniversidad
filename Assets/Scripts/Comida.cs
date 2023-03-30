@@ -8,6 +8,7 @@ public class Comida : MonoBehaviour
     public float hambre = 100f;
     public Image barra;    
     public EnemigoObjetos enem;
+    [SerializeField] private GameObject menuPerder;
 
     void Start()
     {
@@ -19,9 +20,12 @@ public class Comida : MonoBehaviour
     {
         Debug.Log(hambre);
         if(hambre <= 0){
-            //TxtGameO.gameObject.SetActive(true);
             Debug.Log("Perdiste");
+            Time.timeScale = 0f;
+            menuPerder.SetActive(true);
+
         } else if(hambre > 0){
+            Time.timeScale = 1f;
             hambre -= 10f * Time.deltaTime;
         }
 
@@ -34,7 +38,6 @@ public class Comida : MonoBehaviour
             Puntos();
         }
     }
-
     
     public void Puntos(){
         hambre += enem.puntos;

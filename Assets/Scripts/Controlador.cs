@@ -8,6 +8,19 @@ public class Controlador : MonoBehaviour
     public int velocidad;
     public Rigidbody miRigidbody;
     public bool conFisicas;
+    public bool atacar;
+
+    void Update(){
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity)){
+            Debug.Log("choca");
+            EnemigoObjetos mod = hit.collider.gameObject.GetComponent<EnemigoObjetos>();
+            if (mod != null && atacar){
+                mod.vida -= 10f;
+                atacar = false;
+            }
+        }
+    }
 
     public float dashVelocidad;
     public float dashDuracion;
@@ -74,5 +87,4 @@ public class Controlador : MonoBehaviour
             miRigidbody.velocity = (velocidad + dashing) * movimiento;
             //gameObject.transform.Translate(direccion * velocidad * Time.deltaTime);
         }
-    }
 }

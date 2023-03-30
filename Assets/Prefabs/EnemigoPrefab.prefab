@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropeo: {fileID: 9154485852231042909, guid: ee9933c62bf517f42aaaf8663df12282, type: 3}
   puntos: 30
-  vida: 50
+  vida: 30
 --- !u!114 &2492558703068401793
 MonoBehaviour:
   m_ObjectHideFlags: 0
