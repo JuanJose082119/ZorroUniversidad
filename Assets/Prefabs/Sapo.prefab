@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 7257968405436422892}
   - component: {fileID: 93503689878413324}
   - component: {fileID: 7182200497923372911}
-  - component: {fileID: 338761602455531223}
   - component: {fileID: 4203082343754738816}
   - component: {fileID: 241083432829240108}
   - component: {fileID: -910550503106353510}
   - component: {fileID: -4385805751323230819}
+  - component: {fileID: 5116027322328580235}
   m_Layer: 0
   m_Name: Sapo
   m_TagString: Enemigo
@@ -89,19 +89,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &338761602455531223
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8053401538594540765}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 54
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &4203082343754738816
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -248,6 +235,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &5116027322328580235
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8053401538594540765}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.7, y: 14.24, z: 22.26}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &9203605311675883194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -318,6 +318,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4ea7f758c7130f349bf8d09a0b57bd86, type: 3}
       propertyPath: m_Name
       value: Sapooooo
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4ea7f758c7130f349bf8d09a0b57bd86, type: 3}
+      propertyPath: m_TagString
+      value: Enemigo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ea7f758c7130f349bf8d09a0b57bd86, type: 3}

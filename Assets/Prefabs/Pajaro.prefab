@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8098663968431000665}
   - component: {fileID: 7066305056855496415}
   - component: {fileID: 8467121693756338108}
-  - component: {fileID: 4583035237170764356}
   - component: {fileID: 3378685058467013194}
   - component: {fileID: 4804810182334967915}
   - component: {fileID: -1857531757852244453}
@@ -100,21 +99,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.42, y: 7.07, z: 5.24}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &4583035237170764356
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7296655538887743828}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 24.58
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 6.42, y: 7.1731415, z: 5.24}
+  m_Center: {x: 0, y: 0.051572066, z: 0}
 --- !u!195 &3378685058467013194
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -317,6 +303,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fe648afbf8ef83b449aade1650466d8b, type: 3}
       propertyPath: m_Name
       value: Pajarororororor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe648afbf8ef83b449aade1650466d8b, type: 3}
+      propertyPath: m_TagString
+      value: Enemigo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe648afbf8ef83b449aade1650466d8b, type: 3}
