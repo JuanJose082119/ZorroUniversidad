@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4373492704449592946}
   - component: {fileID: -5694950642565535368}
   m_Layer: 0
-  m_Name: EnemigoPrefab
+  m_Name: Pajaro
   m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
