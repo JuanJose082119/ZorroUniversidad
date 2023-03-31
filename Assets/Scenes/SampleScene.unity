@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -760,6 +760,7 @@ MonoBehaviour:
   conFisicas: 0
   dropeo: {fileID: 9154485852231042909, guid: ee9933c62bf517f42aaaf8663df12282, type: 3}
   atacar: 0
+  gen: {fileID: 693491595}
   dashVelocidad: 0
   dashDuracion: 0
   dashContador: 0
@@ -780,6 +781,7 @@ MonoBehaviour:
   barra: {fileID: 1756892008}
   menuPerder: {fileID: 1014296117}
   gameManager: {fileID: 546475080}
+  contKill: 0
 --- !u!1 &450007695 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8009987137999418058, guid: e35a38b2475c7d145b659ba1dd0280f6, type: 3}
@@ -1454,11 +1456,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemigoPrefab:
-  - {fileID: 1960545789581357716, guid: 21c2f4696ef4b014f9ed179ee0047b83, type: 3}
-  - {fileID: 1960545789581357716, guid: 0209a0ebaa9aae241a3a6b806aed0af9, type: 3}
-  - {fileID: 1960545789581357716, guid: c089dd2feb5032a4e9b3bc2af0c52d4a, type: 3}
+  - {fileID: 7296655538887743828, guid: 21c2f4696ef4b014f9ed179ee0047b83, type: 3}
+  - {fileID: 8070327681324983384, guid: 0209a0ebaa9aae241a3a6b806aed0af9, type: 3}
+  - {fileID: 8053401538594540765, guid: c089dd2feb5032a4e9b3bc2af0c52d4a, type: 3}
+  - {fileID: 4805154737129263704, guid: 9051dcb3e245225439e99c1540e276b5, type: 3}
+  - {fileID: 8147112142178565837, guid: d24a1646adc7be5498ec2a3c7d5903fe, type: 3}
+  - {fileID: 1088703158355290526, guid: fd32933b3cd284c4095edd6602a70b01, type: 3}
   enemigoIntervalo: 3
-  random: 0
+  com: {fileID: 375772619}
+  boss: 1
 --- !u!4 &693491596
 Transform:
   m_ObjectHideFlags: 0
@@ -2207,7 +2213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: -0.7097157, y: 10.06, z: -9.79}
+  m_LocalPosition: {x: -0.7097157, y: 5.3, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4218,7 +4224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
