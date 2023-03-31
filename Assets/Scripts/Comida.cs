@@ -9,6 +9,7 @@ public class Comida : MonoBehaviour
     public Image barra;    
     [SerializeField] private GameObject menuPerder;
     public GameManager gameManager;
+    public int contKill;
 
     // Update is called once per frame
     void Update()
@@ -31,11 +32,9 @@ public class Comida : MonoBehaviour
     private void OnCollisionEnter(Collision col){
         if(col.gameObject.tag == "Drop"){
             Destroy(col.gameObject);
-            Puntos();
+            hambre += 30f;
+            contKill++;
         }
     }
     
-    public void Puntos(){
-        hambre += 30f;
-    }
 }
