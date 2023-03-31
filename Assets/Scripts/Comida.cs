@@ -10,11 +10,6 @@ public class Comida : MonoBehaviour
     [SerializeField] private GameObject menuPerder;
     public GameManager gameManager;
 
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
