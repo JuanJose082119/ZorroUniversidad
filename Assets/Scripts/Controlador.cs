@@ -75,8 +75,8 @@ public class Controlador : MonoBehaviour
     }
     */
 
-    private void OnCollisionStay(Collision col){
-        if (col.gameObject.tag == "Enemigo"){
+    private void OnCollisionEnter(Collision col){
+        //if (col.gameObject.tag == "Enemigo"){
             if (atacar){
                 Destroy(col.gameObject);
                 Instantiate(dropeo, col.gameObject.transform.position, Quaternion.identity);
@@ -85,7 +85,7 @@ public class Controlador : MonoBehaviour
                 audioSource = GetComponent<AudioSource>();
                 audioSource.Play();
             }
-        }
+        //}
     }
 
     public void Atacar(){
