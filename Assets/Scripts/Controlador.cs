@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class Controlador : MonoBehaviour
 {
-    public Joystick miJoystick;
-    public int velocidad;
-    public Rigidbody miRigidbody;
-    public bool conFisicas;
     public GameObject dropeo;
     public bool atacar = false;
     public GeneradorEnemigos gen;
     
     void Update(){      
-
-        movimiento.x = miJoystick.Horizontal;
-        movimiento.z = miJoystick.Vertical;
         if(Input.GetButtonDown("Fire2"))
         {
             Dash();
@@ -61,9 +54,10 @@ public class Controlador : MonoBehaviour
             //miRigidbody.velocity = new Vector3(miRigidbody.velocity.x, miRigidbody.velocity.y, dashVelocidad * transformJugador.localScale.z);
                 //new Vector3(dashVelocidad * transformJugador.localScale.x, miRigidbody.velocity.y, dashVelocidad * transformJugador.localScale.z);
         }
-        Mover();
+        //Mover();
     }
 
+    /*
     public void Mover()
     {
         Vector3 direccion = Vector3.forward * miJoystick.Vertical + Vector3.right * miJoystick.Horizontal;
@@ -78,6 +72,7 @@ public class Controlador : MonoBehaviour
             //gameObject.transform.Translate(direccion * velocidad * Time.deltaTime);
         }
     }
+    */
 
     private void OnCollisionStay(Collision col){
         if (col.gameObject.tag == "Enemigo"){

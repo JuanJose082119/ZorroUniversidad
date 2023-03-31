@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bb5d7d78114c94b48b2d7e2bd70daa31
+guid: 6584a7bb71bb2c041907da38295d6652
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
@@ -43,7 +43,7 @@ ModelImporter:
       takeName: rig|rigAction
       internalID: 0
       firstFrame: 0
-      lastFrame: 50
+      lastFrame: 32
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -71,7 +71,7 @@ ModelImporter:
       name: Atacar
       takeName: rig|rigAction
       internalID: 0
-      firstFrame: 66
+      firstFrame: 68
       lastFrame: 101
       wrapMode: 0
       orientationOffsetY: 0
