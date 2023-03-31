@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 85c64ea3c1399e3429cc7ba158b354c6
+guid: d5a82e5c76726de4a985985475ec203c
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
-      74: -518154144676478023
-    second: rig|Action
+      74: -887982601649841707
+    second: metarig|metarigAction
   - first:
       74: 3374748389425109202
     second: rig|rigAction
