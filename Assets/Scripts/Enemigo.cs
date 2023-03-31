@@ -10,6 +10,7 @@ public class Enemigo : MonoBehaviour
     NavMeshAgent _nMAgent;
     float Charspeed;
     Vector3 target;
+    public GameManager gameManager;
 
     
     void Start()
@@ -34,13 +35,15 @@ public class Enemigo : MonoBehaviour
     
     void Update()
     {
-        DetectHigh(); 
-        Distancia();       
-        
-        if(_isAgro){
-            _nMAgent.destination = target;
+        if(gameManager.estaPausado == false)
+        {
+            DetectHigh();
+            Distancia();
+            if (_isAgro)
+            {
+                _nMAgent.destination = target;
+            }
         }
-        
     }
 
 
