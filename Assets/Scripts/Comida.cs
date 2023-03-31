@@ -11,16 +11,21 @@ public class Comida : MonoBehaviour
     public GameManager gameManager;
     public int contKill;
     public AudioSource audioSource;
+    AudioSource musica;
 
-    // Update is called once per frame
+    void Start(){
+        musica = this.audioSource;
+    }
     void Update()
     {
         if (hambre <= 0)
         {
             Time.timeScale = 0f;
             menuPerder.SetActive(true);
-            audioSource = GetComponent<AudioSource>();
+            musica = GetComponent<AudioSource>();
+            musica.Stop();
             audioSource.Play();
+            
 
         }
         else if (hambre > 0 && gameManager.estaPausado == false)
