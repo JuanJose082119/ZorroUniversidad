@@ -7,7 +7,6 @@ public class Comida : MonoBehaviour
 {
     public float hambre = 100f;
     public Image barra;    
-    public EnemigoObjetos enem;
     [SerializeField] private GameObject menuPerder;
 
     void Start()
@@ -18,9 +17,7 @@ public class Comida : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(hambre);
         if(hambre <= 0){
-            Debug.Log("Perdiste");
             Time.timeScale = 0f;
             menuPerder.SetActive(true);
 
@@ -40,6 +37,6 @@ public class Comida : MonoBehaviour
     }
     
     public void Puntos(){
-        hambre += enem.puntos;
+        hambre += 30f;
     }
 }

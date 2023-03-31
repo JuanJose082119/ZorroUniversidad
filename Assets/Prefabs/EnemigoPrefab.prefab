@@ -12,13 +12,12 @@ GameObject:
   - component: {fileID: 5946073869922606264}
   - component: {fileID: 8518864952436522472}
   - component: {fileID: 7270548079154290956}
-  - component: {fileID: -3948742527464319679}
   - component: {fileID: 2492558703068401793}
   - component: {fileID: 4373492704449592946}
   - component: {fileID: -5694950642565535368}
   m_Layer: 0
   m_Name: EnemigoPrefab
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,21 +100,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-3948742527464319679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960545789581357716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627a46b6c57ebe24d862bf6c003a0375, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropeo: {fileID: 9154485852231042909, guid: ee9933c62bf517f42aaaf8663df12282, type: 3}
-  puntos: 30
-  vida: 30
 --- !u!114 &2492558703068401793
 MonoBehaviour:
   m_ObjectHideFlags: 0

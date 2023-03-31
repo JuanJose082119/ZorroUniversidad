@@ -8,18 +8,9 @@ public class Controlador : MonoBehaviour
     public int velocidad;
     public Rigidbody miRigidbody;
     public bool conFisicas;
-    public bool atacar;
-
-    void Update(){
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity)){
-            Debug.Log("choca");
-            EnemigoObjetos mod = hit.collider.gameObject.GetComponent<EnemigoObjetos>();
-            if (mod != null && atacar){
-                mod.vida -= 10f;
-                atacar = false;
-            }
-        }
+    public GameObject dropeo;
+    
+    void Update(){      
 
         movimiento.x = miJoystick.Horizontal;
         movimiento.z = miJoystick.Vertical;
@@ -85,4 +76,18 @@ public class Controlador : MonoBehaviour
             //gameObject.transform.Translate(direccion * velocidad * Time.deltaTime);
         }
     }
+
+    private void OnCollisionStay(Collision col){
+        if (col.gameObject.tag == "Enemigo"){
+            Debug.Log("choca");
+            //if (atacar){
+                //en.Muere();
+                Destroy(col.gameObject);
+                Instantiate(dropeo, col.gameObject.transform.position, Quaternion.identity);
+                //atacar = false;
+            //}
+        }
+    }
+
+    
 }

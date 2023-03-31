@@ -55,7 +55,6 @@ public class Enemigo : MonoBehaviour
         distancia = Vector3.Distance(target, transform.position);
 
         if(distancia <= 1){
-            Debug.Log("PERDISTE");   
             _isAgro = false;
 
         }
