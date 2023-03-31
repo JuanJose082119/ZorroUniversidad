@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8098663968431000665}
   - component: {fileID: 7066305056855496415}
   - component: {fileID: 8467121693756338108}
-  - component: {fileID: 4384046888051439553}
   - component: {fileID: 4583035237170764356}
   - component: {fileID: 3378685058467013194}
+  - component: {fileID: 4804810182334967915}
   m_Layer: 0
   m_Name: Pajaro
   m_TagString: Enemigo
@@ -101,20 +101,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.42, y: 7.07, z: 5.24}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4384046888051439553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7296655538887743828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29e03ac29acfe734daa9727bd85c874b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distancia: 0
-  gameManager: {fileID: 9085413743470261710, guid: 2e2ffae20e8908c4f916b880662b591b, type: 3}
 --- !u!135 &4583035237170764356
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -150,6 +136,20 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4804810182334967915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296655538887743828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b11aff1cb8d91304796d9f0543fb2e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  range: 10
 --- !u!1001 &1271968693059880564
 PrefabInstance:
   m_ObjectHideFlags: 0

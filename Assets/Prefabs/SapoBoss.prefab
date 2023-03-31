@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 7432085235444162484}
   - component: {fileID: 6779916652553947139}
   - component: {fileID: 7334467530342276841}
-  - component: {fileID: 1446763596587751042}
   - component: {fileID: 5145383809484392962}
   - component: {fileID: 4484202103175214862}
   - component: {fileID: 8296765584066216235}
+  - component: {fileID: 9214684281662982477}
   m_Layer: 0
   m_Name: SapoBoss
   m_TagString: Enemigo
@@ -88,19 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1446763596587751042
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088703158355290526}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 11.24, y: 8.68, z: 7.99}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5145383809484392962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +137,20 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!64 &9214684281662982477
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088703158355290526}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: ba0d03353b8cd164fa0d311d952163ff, type: 3}
 --- !u!1001 &6927553224021771819
 PrefabInstance:
   m_ObjectHideFlags: 0

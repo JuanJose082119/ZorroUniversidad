@@ -42,7 +42,7 @@ public class Enemigo : MonoBehaviour
             if (_isAgro)
             {
                 _nMAgent.destination = target;
-            } 
+            }
         }
     }
 
