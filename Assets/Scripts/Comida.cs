@@ -10,6 +10,7 @@ public class Comida : MonoBehaviour
     [SerializeField] private GameObject menuPerder;
     public GameManager gameManager;
     public int contKill;
+    public AudioSource audioSource;
 
     // Update is called once per frame
     void Update()
@@ -18,6 +19,8 @@ public class Comida : MonoBehaviour
         {
             Time.timeScale = 0f;
             menuPerder.SetActive(true);
+            audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
 
         }
         else if (hambre > 0 && gameManager.estaPausado == false)

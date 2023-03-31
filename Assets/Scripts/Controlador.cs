@@ -7,6 +7,7 @@ public class Controlador : MonoBehaviour
     public GameObject dropeo;
     public bool atacar = false;
     public GeneradorEnemigos gen;
+    public AudioSource audioSource;
     
     void Update(){      
         if(Input.GetButtonDown("Fire2"))
@@ -81,6 +82,8 @@ public class Controlador : MonoBehaviour
                 Instantiate(dropeo, col.gameObject.transform.position, Quaternion.identity);
                 atacar = false;
                 gen.boss = true;
+                audioSource = GetComponent<AudioSource>();
+                audioSource.Play();
             }
         }
     }
