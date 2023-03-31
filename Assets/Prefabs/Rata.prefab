@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distancia: 0
+  gameManager: {fileID: 9085413743470261710, guid: 2e2ffae20e8908c4f916b880662b591b, type: 3}
 --- !u!135 &4373492704449592946
 SphereCollider:
   m_ObjectHideFlags: 0
