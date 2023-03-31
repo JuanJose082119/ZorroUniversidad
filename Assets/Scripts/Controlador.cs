@@ -9,6 +9,7 @@ public class Controlador : MonoBehaviour
     public Rigidbody miRigidbody;
     public bool conFisicas;
     public GameObject dropeo;
+    public bool atacar = false;
     
     void Update(){      
 
@@ -80,13 +81,16 @@ public class Controlador : MonoBehaviour
     private void OnCollisionStay(Collision col){
         if (col.gameObject.tag == "Enemigo"){
             Debug.Log("choca");
-            //if (atacar){
-                //en.Muere();
+            if (atacar){
                 Destroy(col.gameObject);
                 Instantiate(dropeo, col.gameObject.transform.position, Quaternion.identity);
-                //atacar = false;
-            //}
+                atacar = false;
+            }
         }
+    }
+
+    public void Atacar(){
+        atacar = true;
     }
 
     
