@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class GeneradorEnemigos : MonoBehaviour
 {
-    [SerializeField] private GameObject enemigoPrefab;
+    [SerializeField] private GameObject[] enemigoPrefab;
     [SerializeField] private float enemigoIntervalo;
+    public int random;
 
     private void Start()
-    {
-        StartCoroutine(GenEnemigos(enemigoIntervalo, enemigoPrefab));
+    {        
+        StartCoroutine(GenEnemigos(enemigoIntervalo));
     }
 
-    private IEnumerator GenEnemigos(float intervalo, GameObject enemigo)
+    private IEnumerator GenEnemigos(float intervalo)
     {
+        random = Random.Range (0,3);
         yield return new WaitForSeconds(intervalo);
-        GameObject nuevoEnemigo = Instantiate(enemigo, this.gameObject.transform.position, Quaternion.identity);
-        StartCoroutine(GenEnemigos(intervalo, enemigo));
+        GameObject nuevoEnemigo = Instantiate(enemigoPrefab[random], this.gameObject.transform.position, Quaternion.identity);
+        StartCoroutine(GenEnemigos(intervalo));
     }
 }
